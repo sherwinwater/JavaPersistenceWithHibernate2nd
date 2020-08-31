@@ -1,0 +1,552 @@
+<html>
+<head>
+<title>TestNG:  Simple Mappings</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Simple Mappings</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/22</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Aug 30 21:03:14 EDT 2020</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (213 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUDMetadataHBMXML.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.CRUDMetadataHBMXML</td>
+<td><div><pre>javax.persistence.PersistenceException: Unable to build entity manager factory
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:66)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at org.jpwh.env.JPASetup.&lt;init&gt;(JPASetup.java:62)
+	at org.jpwh.env.JPATest.beforeMethod(JPATest.java:54)
+Caused by: org.hibernate.boot.InvalidMappingException: Could not parse mapping document: simple/Native.hbm.xml (RESOURCE)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:46)
+	at org.hibernate.boot.jaxb.internal.UrlXmlSource.doBind(UrlXmlSource.java:36)
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.bind(XmlMappingBinderAccess.java:59)
+	at org.hibernate.boot.MetadataSources.addResource(MetadataSources.java:274)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populate(EntityManagerFactoryBuilderImpl.java:668)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.&lt;init&gt;(EntityManagerFactoryBuilderImpl.java:175)
+	at org.hibernate.jpa.boot.spi.Bootstrap.getEntityManagerFactoryBuilder(Bootstrap.java:34)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilder(HibernatePersistenceProvider.java:165)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:114)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:71)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:52)
+	... 38 more
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(simple/Native.hbm.xml)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:43)
+	... 48 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 52 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 56 more
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2020602315", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2020602315'><pre>javax.persistence.PersistenceException: Unable to build entity manager factory
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:66)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at org.jpwh.env.JPASetup.&lt;init&gt;(JPASetup.java:62)
+	at org.jpwh.env.JPATest.beforeMethod(JPATest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: org.hibernate.boot.InvalidMappingException: Could not parse mapping document: simple/Native.hbm.xml (RESOURCE)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:46)
+	at org.hibernate.boot.jaxb.internal.UrlXmlSource.doBind(UrlXmlSource.java:36)
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.bind(XmlMappingBinderAccess.java:59)
+	at org.hibernate.boot.MetadataSources.addResource(MetadataSources.java:274)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populate(EntityManagerFactoryBuilderImpl.java:668)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.&lt;init&gt;(EntityManagerFactoryBuilderImpl.java:175)
+	at org.hibernate.jpa.boot.spi.Bootstrap.getEntityManagerFactoryBuilder(Bootstrap.java:34)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilder(HibernatePersistenceProvider.java:165)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:114)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:71)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:52)
+	... 38 more
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(simple/Native.hbm.xml)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:43)
+	... 48 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 52 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 56 more
+</pre></div></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUDMetadataHBMXML@702657cc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUDMetadataXML.beforeClass()'><b>beforeClass</b><br>Test class: org.jpwh.test.simple.CRUDMetadataXML</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUDMetadataXML@43bc63a3</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.AccessJPAMetamodel.beforeClass()'><b>beforeClass</b><br>Test class: org.jpwh.test.simple.AccessJPAMetamodel</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.AccessJPAMetamodel@22555ebf</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.MappingEmbeddables.beforeClass()'><b>beforeClass</b><br>Test class: org.jpwh.test.simple.MappingEmbeddables</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.MappingEmbeddables@34e9fd99</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeClass()'><b>beforeClass</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.MappingManyToOne.beforeClass()'><b>beforeClass</b><br>Test class: org.jpwh.test.simple.MappingManyToOne</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.MappingManyToOne@3c41ed1d</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUD.beforeClass()'><b>beforeClass</b><br>Test class: org.jpwh.test.simple.CRUD</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUD@36ebc363</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUDMetadataOverrideXML.beforeClass()'><b>beforeClass</b><br>Test class: org.jpwh.test.simple.CRUDMetadataOverrideXML</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUDMetadataOverrideXML@54d9d12d</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUDMetadataXML.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.CRUDMetadataXML</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUDMetadataXML@43bc63a3</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.AccessJPAMetamodel.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.AccessJPAMetamodel</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.AccessJPAMetamodel@22555ebf</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.AccessJPAMetamodel.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.AccessJPAMetamodel</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.AccessJPAMetamodel@22555ebf</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.AccessJPAMetamodel.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.AccessJPAMetamodel</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.AccessJPAMetamodel@22555ebf</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.MappingEmbeddables.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.MappingEmbeddables</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.MappingEmbeddables@34e9fd99</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.MappingEmbeddables.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.MappingEmbeddables</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.MappingEmbeddables@34e9fd99</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.MappingManyToOne.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.MappingManyToOne</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.MappingManyToOne@3c41ed1d</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUD.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.CRUD</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUD@36ebc363</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUDMetadataOverrideXML.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.CRUDMetadataOverrideXML</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUDMetadataOverrideXML@54d9d12d</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUDMetadataOverrideXML.beforeMethod()'><b>beforeMethod</b><br>Test class: org.jpwh.test.simple.CRUDMetadataOverrideXML</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUDMetadataOverrideXML@54d9d12d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.jpwh.test.simple.ModelOperations.validateItem()'><b>validateItem</b><br>Test class: org.jpwh.test.simple.ModelOperations</td>
+<td><div><pre>javax.validation.ValidationException: Unable to instantiate Configuration.
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:279)
+	at javax.validation.Validation.buildDefaultValidatorFactory(Validation.java:110)
+	at org.jpwh.test.simple.ModelOperations.validateItem(ModelOperations.java:42)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 1
+	at org.hibernate.validator.internal.util.Version.getJavaRelease(Version.java:36)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.&lt;init&gt;(ConfigurationImpl.java:119)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.&lt;init&gt;(ConfigurationImpl.java:95)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:31)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	... 35 more
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace766722027", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace766722027'><pre>javax.validation.ValidationException: Unable to instantiate Configuration.
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:279)
+	at javax.validation.Validation.buildDefaultValidatorFactory(Validation.java:110)
+	at org.jpwh.test.simple.ModelOperations.validateItem(ModelOperations.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 1
+	at org.hibernate.validator.internal.util.Version.getJavaRelease(Version.java:36)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.&lt;init&gt;(ConfigurationImpl.java:119)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.&lt;init&gt;(ConfigurationImpl.java:95)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:31)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>org.jpwh.test.simple.ModelOperations@38425407</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.jpwh.test.simple.ModelOperations.linkBidAndItem()'><b>linkBidAndItem</b><br>Test class: org.jpwh.test.simple.ModelOperations</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.ModelOperations@38425407</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.jpwh.test.simple.AccessJPAMetamodel.accessDynamicMetamodel()'><b>accessDynamicMetamodel</b><br>Test class: org.jpwh.test.simple.AccessJPAMetamodel</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.AccessJPAMetamodel@22555ebf</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.AccessJPAMetamodel.accessStaticMetamodel()'><b>accessStaticMetamodel</b><br>Test class: org.jpwh.test.simple.AccessJPAMetamodel</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.AccessJPAMetamodel@22555ebf</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.basicUOW()'><b>basicUOW</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUDMetadataOverrideXML.checkMetadataOverride()'><b>checkMetadataOverride</b><br>Test class: org.jpwh.test.simple.CRUDMetadataOverrideXML</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUDMetadataOverrideXML@54d9d12d</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.detach()'><b>detach</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.flushModeType()'><b>flushModeType</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.makePersistent()'><b>makePersistent</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.makeTransient()'><b>makeTransient</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.mergeDetached()'><b>mergeDetached</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.AccessJPAMetamodel.queryStaticMetamodel()'><b>queryStaticMetamodel</b><br>Test class: org.jpwh.test.simple.AccessJPAMetamodel</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.AccessJPAMetamodel@22555ebf</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.refresh()'><b>refresh</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.replicate()'><b>replicate</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.retrievePersistent()'><b>retrievePersistent</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.retrievePersistentReference()'><b>retrievePersistentReference</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.SimpleTransitions.scopeOfIdentity()'><b>scopeOfIdentity</b><br>Test class: org.jpwh.test.simple.SimpleTransitions</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.SimpleTransitions@22ff4249</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.MappingManyToOne.storeAndLoadBids()'><b>storeAndLoadBids</b><br>Test class: org.jpwh.test.simple.MappingManyToOne</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.MappingManyToOne@3c41ed1d</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.MappingEmbeddables.storeAndLoadInvalidUsers()'><b>storeAndLoadInvalidUsers</b><br>Test class: org.jpwh.test.simple.MappingEmbeddables</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.MappingEmbeddables@34e9fd99</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.MappingEmbeddables.storeAndLoadUsers()'><b>storeAndLoadUsers</b><br>Test class: org.jpwh.test.simple.MappingEmbeddables</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.MappingEmbeddables@34e9fd99</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUDMetadataHBMXML.storeAndQueryItems()'><b>storeAndQueryItems</b><br>Test class: org.jpwh.test.simple.CRUDMetadataHBMXML</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUDMetadataHBMXML@702657cc</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUDMetadataXML.storeAndQueryItems()'><b>storeAndQueryItems</b><br>Test class: org.jpwh.test.simple.CRUDMetadataXML</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUDMetadataXML@43bc63a3</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUD.storeAndQueryItems()'><b>storeAndQueryItems</b><br>Test class: org.jpwh.test.simple.CRUD</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUD@36ebc363</td></tr>
+<tr>
+<td title='org.jpwh.test.simple.CRUDMetadataOverrideXML.storeAndQueryItems()'><b>storeAndQueryItems</b><br>Test class: org.jpwh.test.simple.CRUDMetadataOverrideXML</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.simple.CRUDMetadataOverrideXML@54d9d12d</td></tr>
+</table><p>
+</body>
+</html>

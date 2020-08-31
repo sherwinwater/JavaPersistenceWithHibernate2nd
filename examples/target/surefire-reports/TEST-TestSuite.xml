@@ -1,0 +1,1592 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="316" failures="10" name="TestSuite" time="45.241" errors="0" skipped="166">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="9.0.7.1+1"/>
+    <property name="sun.boot.library.path" value="/Users/sherwin/.sdkman/candidates/java/9.0.7-zulu/lib"/>
+    <property name="user.country.format" value="CA"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/sherwin/Documents/sherwinMacAir/CS/Hibernate/Java Persistence with Hibernate-source-code-20151103"/>
+    <property name="java.vm.vendor" value="Azul Systems, Inc."/>
+    <property name="java.vendor.url" value="http://www.azulsystems.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/sherwin/Documents/sherwinMacAir/CS/Hibernate/Java Persistence with Hibernate-source-code-20151103"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="9.0.7.1+1"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/3d/bqdy1nyj6jn_kbmrw4p_yd4c0000gp/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.6.3_1/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/sherwin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/usr/local/Cellar/maven/3.6.3_1/libexec/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="53.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.15.6"/>
+    <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/lib/jansi-native"/>
+    <property name="user.home" value="/Users/sherwin"/>
+    <property name="user.timezone" value="America/Toronto"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="9"/>
+    <property name="user.name" value="sherwin"/>
+    <property name="java.class.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="9"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="java.home" value="/Users/sherwin/.sdkman/candidates/java/9.0.7-zulu"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="9.0.7.1"/>
+    <property name="java.vendor" value="Azul Systems, Inc."/>
+    <property name="maven.home" value="/usr/local/Cellar/maven/3.6.3_1/libexec"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://www.azulsystems.com/support/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="org.jpwh.helloworld.HelloWorldJPA" name="storeLoadMessage" time="1.514"/>
+  <testcase classname="org.jpwh.helloworld.HelloWorldHibernate" name="storeLoadMessage" time="0.056"/>
+  <testcase classname="org.jpwh.test.simple.CRUDMetadataHBMXML" name="beforeMethod" time="0.278">
+    <failure message="Unable to build entity manager factory" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: Unable to build entity manager factory
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:66)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at org.jpwh.env.JPASetup.&lt;init&gt;(JPASetup.java:62)
+	at org.jpwh.env.JPATest.beforeMethod(JPATest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: org.hibernate.boot.InvalidMappingException: Could not parse mapping document: simple/Native.hbm.xml (RESOURCE)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:46)
+	at org.hibernate.boot.jaxb.internal.UrlXmlSource.doBind(UrlXmlSource.java:36)
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.bind(XmlMappingBinderAccess.java:59)
+	at org.hibernate.boot.MetadataSources.addResource(MetadataSources.java:274)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populate(EntityManagerFactoryBuilderImpl.java:668)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.&lt;init&gt;(EntityManagerFactoryBuilderImpl.java:175)
+	at org.hibernate.jpa.boot.spi.Bootstrap.getEntityManagerFactoryBuilder(Bootstrap.java:34)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilder(HibernatePersistenceProvider.java:165)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:114)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:71)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:52)
+	... 38 more
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(simple/Native.hbm.xml)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:43)
+	... 48 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 52 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 56 more
+Caused by: org.hibernate.boot.InvalidMappingException: Could not parse mapping document: simple/Native.hbm.xml (RESOURCE)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:46)
+	at org.hibernate.boot.jaxb.internal.UrlXmlSource.doBind(UrlXmlSource.java:36)
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.bind(XmlMappingBinderAccess.java:59)
+	at org.hibernate.boot.MetadataSources.addResource(MetadataSources.java:274)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populate(EntityManagerFactoryBuilderImpl.java:668)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.&lt;init&gt;(EntityManagerFactoryBuilderImpl.java:175)
+	at org.hibernate.jpa.boot.spi.Bootstrap.getEntityManagerFactoryBuilder(Bootstrap.java:34)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilder(HibernatePersistenceProvider.java:165)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:114)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:71)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:52)
+	... 38 more
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(simple/Native.hbm.xml)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:43)
+	... 48 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 52 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 56 more
+</failure>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUDMetadataHBMXML" name="storeAndQueryItems" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUDMetadataXML" name="beforeClass" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUDMetadataXML" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUDMetadataXML" name="storeAndQueryItems" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.AccessJPAMetamodel" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.AccessJPAMetamodel" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.AccessJPAMetamodel" name="accessDynamicMetamodel" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.AccessJPAMetamodel" name="beforeMethod" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.AccessJPAMetamodel" name="accessStaticMetamodel" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.AccessJPAMetamodel" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.AccessJPAMetamodel" name="queryStaticMetamodel" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.MappingEmbeddables" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.MappingEmbeddables" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.MappingEmbeddables" name="storeAndLoadInvalidUsers" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.MappingEmbeddables" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.MappingEmbeddables" name="storeAndLoadUsers" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="basicUOW" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="detach" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="flushModeType" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeMethod" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="makePersistent" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="makeTransient" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="mergeDetached" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="refresh" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="replicate" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="retrievePersistent" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="retrievePersistentReference" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.SimpleTransitions" name="scopeOfIdentity" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.MappingManyToOne" name="beforeClass" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.MappingManyToOne" name="beforeMethod" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.MappingManyToOne" name="storeAndLoadBids" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUD" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUD" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUD" name="storeAndQueryItems" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.ModelOperations" name="linkBidAndItem" time="0.001"/>
+  <testcase classname="org.jpwh.test.simple.ModelOperations" name="validateItem" time="0.002">
+    <failure message="Unable to instantiate Configuration." type="javax.validation.ValidationException">javax.validation.ValidationException: Unable to instantiate Configuration.
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:279)
+	at javax.validation.Validation.buildDefaultValidatorFactory(Validation.java:110)
+	at org.jpwh.test.simple.ModelOperations.validateItem(ModelOperations.java:42)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 1
+	at org.hibernate.validator.internal.util.Version.getJavaRelease(Version.java:36)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.&lt;init&gt;(ConfigurationImpl.java:119)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.&lt;init&gt;(ConfigurationImpl.java:95)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:31)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	... 35 more
+</failure>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUDMetadataOverrideXML" name="beforeClass" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUDMetadataOverrideXML" name="beforeMethod" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUDMetadataOverrideXML" name="checkMetadataOverride" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUDMetadataOverrideXML" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.simple.CRUDMetadataOverrideXML" name="storeAndQueryItems" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.SingleTable" name="storeBillingDetailsLoadCreditCards" time="0.015"/>
+  <testcase classname="org.jpwh.test.inheritance.SingleTable" name="jdbcBillingDetailsSqlQuery" time="0.016"/>
+  <testcase classname="org.jpwh.test.inheritance.SingleTable" name="jdbcCreditCardSqlQuery" time="0.016"/>
+  <testcase classname="org.jpwh.test.inheritance.SingleTable" name="storeLoadBillingDetails" time="0.012"/>
+  <testcase classname="org.jpwh.test.inheritance.MappedSuperclass" name="storeBillingDetailsLoadCreditCards" time="0.013"/>
+  <testcase classname="org.jpwh.test.inheritance.MappedSuperclass" name="jdbcSqlQueryBankAccount" time="0.011"/>
+  <testcase classname="org.jpwh.test.inheritance.MappedSuperclass" name="jdbcSqlQueryCreditCard" time="0.012"/>
+  <testcase classname="org.jpwh.test.inheritance.MappedSuperclass" name="storeLoadBillingDetails" time="0.012"/>
+  <testcase classname="org.jpwh.test.inheritance.TablePerClass" name="storeBillingDetailsLoadCreditCards" time="0.011"/>
+  <testcase classname="org.jpwh.test.inheritance.TablePerClass" name="jdbcBillingDetailsSqlQuery" time="0.018"/>
+  <testcase classname="org.jpwh.test.inheritance.TablePerClass" name="storeLoadBillingDetails" time="0.009"/>
+  <testcase classname="org.jpwh.test.inheritance.Mixed" name="storeBillingDetailsLoadCreditCards" time="0.011"/>
+  <testcase classname="org.jpwh.test.inheritance.Mixed" name="jdbcBillingDetailsSqlQuery" time="0.011"/>
+  <testcase classname="org.jpwh.test.inheritance.Mixed" name="storeLoadBillingDetails" time="0.012"/>
+  <testcase classname="org.jpwh.test.inheritance.PolymorphicOneToMany" name="storeAndLoadItemBids" time="0.053"/>
+  <testcase classname="org.jpwh.test.inheritance.MixedFetchSelect" name="beforeMethod" time="0.123">
+    <failure message="Unable to build entity manager factory" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: Unable to build entity manager factory
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:66)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at org.jpwh.env.JPASetup.&lt;init&gt;(JPASetup.java:62)
+	at org.jpwh.env.JPATest.beforeMethod(JPATest.java:54)
+	at jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: org.hibernate.boot.InvalidMappingException: Could not parse mapping document: inheritance/mixed/FetchSelect.hbm.xml (RESOURCE)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:46)
+	at org.hibernate.boot.jaxb.internal.UrlXmlSource.doBind(UrlXmlSource.java:36)
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.bind(XmlMappingBinderAccess.java:59)
+	at org.hibernate.boot.MetadataSources.addResource(MetadataSources.java:274)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populate(EntityManagerFactoryBuilderImpl.java:668)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.&lt;init&gt;(EntityManagerFactoryBuilderImpl.java:175)
+	at org.hibernate.jpa.boot.spi.Bootstrap.getEntityManagerFactoryBuilder(Bootstrap.java:34)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilder(HibernatePersistenceProvider.java:165)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:114)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:71)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:52)
+	... 37 more
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(inheritance/mixed/FetchSelect.hbm.xml)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:43)
+	... 47 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 51 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 55 more
+Caused by: org.hibernate.boot.InvalidMappingException: Could not parse mapping document: inheritance/mixed/FetchSelect.hbm.xml (RESOURCE)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:46)
+	at org.hibernate.boot.jaxb.internal.UrlXmlSource.doBind(UrlXmlSource.java:36)
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.bind(XmlMappingBinderAccess.java:59)
+	at org.hibernate.boot.MetadataSources.addResource(MetadataSources.java:274)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populate(EntityManagerFactoryBuilderImpl.java:668)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.&lt;init&gt;(EntityManagerFactoryBuilderImpl.java:175)
+	at org.hibernate.jpa.boot.spi.Bootstrap.getEntityManagerFactoryBuilder(Bootstrap.java:34)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilder(HibernatePersistenceProvider.java:165)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:114)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:71)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:52)
+	... 37 more
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(inheritance/mixed/FetchSelect.hbm.xml)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:43)
+	... 47 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 51 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 55 more
+</failure>
+    <system-err>[main            ] DEBUG  - 21:03:19,222 - org.hibernate.SQL: 
+    drop table BankAccount if exists
+[main            ] DEBUG  - 21:03:19,222 - org.hibernate.SQL: 
+    drop table CreditCard if exists
+[main            ] DEBUG  - 21:03:19,223 - org.hibernate.SQL: 
+    drop table USERS if exists
+[main            ] DEBUG  - 21:03:19,223 - org.hibernate.SQL: 
+    drop sequence if exists JPWH_SEQUENCE
+</system-err>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.MixedFetchSelect" name="storeBillingDetailsLoadCreditCards" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.MixedFetchSelect" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.MixedFetchSelect" name="jdbcBillingDetailsSqlQuery" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.MixedFetchSelect" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.MixedFetchSelect" name="storeLoadBillingDetails" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.PolymorphicManyToOne" name="beforeClass" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.PolymorphicManyToOne" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.PolymorphicManyToOne" name="storeAndLoadItemBids" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Embeddable" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Embeddable" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Embeddable" name="storeAndLoad" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Joined" name="beforeClass" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Joined" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Joined" name="storeBillingDetailsLoadCreditCards" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Joined" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Joined" name="jdbcBillingDetailsSqlQuery" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Joined" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Joined" name="jdbcCreditCardSqlQuery" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Joined" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.inheritance.Joined" name="storeLoadBillingDetails" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.converter.UserTypes" name="storeLoadMonetaryAmount" time="0.013"/>
+  <testcase classname="org.jpwh.test.advanced.BooleanOverride" name="storeLoadOverride" time="0.02"/>
+  <testcase classname="org.jpwh.test.advanced.NestedComponents" name="storeAndLoadUsers" time="0.004"/>
+  <testcase classname="org.jpwh.test.advanced.GeneratedProperties" name="storeLoadInitialPrice" time="0.016"/>
+  <testcase classname="org.jpwh.test.advanced.GeneratedProperties" name="storeLoadLastModified" time="0.015"/>
+  <testcase classname="org.jpwh.test.converter.Converters" name="storeAndLoadZipcode" time="0.005"/>
+  <testcase classname="org.jpwh.test.converter.Converters" name="storeLoadMonetaryAmount" time="0.024"/>
+  <testcase classname="org.jpwh.test.advanced.DerivedProperties" name="storeLoadFormula" time="0.012"/>
+  <testcase classname="org.jpwh.test.advanced.DerivedProperties" name="storeLoadFormulaSubselect" time="0.018"/>
+  <testcase classname="org.jpwh.test.advanced.AccessType" name="storeLoadAccessType" time="0.028"/>
+  <testcase classname="org.jpwh.test.advanced.LazyProperties" name="storeLoadLocator" time="0.037"/>
+  <testcase classname="org.jpwh.test.advanced.LazyProperties" name="storeLoadProperties" time="0.012"/>
+  <testcase classname="org.jpwh.test.advanced.Temporal" name="storeLoadTemporal" time="0.005"/>
+  <testcase classname="org.jpwh.test.advanced.Enum" name="storeLoadEnum" time="0.004"/>
+  <testcase classname="org.jpwh.test.advanced.TransformingColumns" name="storeLoadTransform" time="0.018"/>
+  <testcase classname="org.jpwh.test.advanced.MappedSubselect" name="loadSubselectEntity" time="0.021"/>
+  <testcase classname="org.jpwh.test.collections.SortedSetOfStrings" name="storeLoadCollection" time="0.007"/>
+  <testcase classname="org.jpwh.test.associations.OneToManyEmbeddableJoinTable" name="storeAndLoadUsersShipments" time="0.006"/>
+  <testcase classname="org.jpwh.test.collections.ListOfStrings" name="storeLoadCollection" time="0.008"/>
+  <testcase classname="org.jpwh.test.associations.OneToOneForeignKey" name="storeAndLoadUserAddress" time="0.009"/>
+  <testcase classname="org.jpwh.test.associations.OneToOneForeignKey" name="storeNonUniqueRelationship" time="0.013"/>
+  <testcase classname="org.jpwh.test.collections.SetOfEmbeddablesOrderBy" name="storeLoadCollection" time="0.007"/>
+  <testcase classname="org.jpwh.test.associations.MapsMapKey" name="storeAndLoadItemBids" time="0.009"/>
+  <testcase classname="org.jpwh.test.collections.MapOfStrings" name="storeLoadCollection" time="0.007"/>
+  <testcase classname="org.jpwh.test.associations.MapsTernary" name="storeLoadCategoryItems" time="0.014"/>
+  <testcase classname="org.jpwh.test.collections.SetOfEmbeddables" name="storeLoadCollection" time="0.005"/>
+  <testcase classname="org.jpwh.test.associations.OneToOneJoinTable" name="storeAndLoadUserAddress" time="0.003">
+    <failure message="org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.associations.onetoone.jointable.Shipment.auction" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.associations.onetoone.jointable.Shipment.auction
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1692)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1602)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1608)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:1152)
+	at org.jpwh.test.associations.OneToOneJoinTable.storeAndLoadUserAddress(OneToOneJoinTable.java:30)
+Caused by: org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.associations.onetoone.jointable.Shipment.auction
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:92)
+	at org.hibernate.action.internal.AbstractEntityInsertAction.nullifyTransientReferencesIfNotAlready(AbstractEntityInsertAction.java:115)
+	at org.hibernate.action.internal.AbstractEntityInsertAction.makeEntityManaged(AbstractEntityInsertAction.java:124)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:185)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:163)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:150)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:325)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:272)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:178)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:121)
+	at org.hibernate.jpa.event.internal.core.JpaPersistEventListener.saveWithGeneratedId(JpaPersistEventListener.java:67)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:189)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:132)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:58)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:774)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:747)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:752)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:1146)
+	... 34 more
+</failure>
+    <system-err>[main            ] DEBUG  - 21:03:25,162 - org.hibernate.SQL: 
+    drop table IMAGE if exists
+[main            ] DEBUG  - 21:03:25,163 - org.hibernate.SQL: 
+    drop table Item if exists
+[main            ] DEBUG  - 21:03:25,163 - org.hibernate.SQL: 
+    drop sequence if exists JPWH_SEQUENCE
+[main            ] DEBUG  - 21:03:25,257 - org.hibernate.SQL: 
+    drop table Item if exists
+[main            ] DEBUG  - 21:03:25,257 - org.hibernate.SQL: 
+    drop table ITEM_SHIPMENT if exists
+[main            ] DEBUG  - 21:03:25,257 - org.hibernate.SQL: 
+    drop table Shipment if exists
+[main            ] DEBUG  - 21:03:25,257 - org.hibernate.SQL: 
+    drop sequence if exists JPWH_SEQUENCE
+[main            ] DEBUG  - 21:03:25,301 - org.hibernate.SQL: 
+    create sequence JPWH_SEQUENCE start with 1000 increment by 1
+[main            ] DEBUG  - 21:03:25,301 - org.hibernate.SQL: 
+    create table Item (
+        id bigint not null,
+        name varchar(255),
+        primary key (id)
+    )
+[main            ] DEBUG  - 21:03:25,301 - org.hibernate.SQL: 
+    create table ITEM_SHIPMENT (
+        ITEM_ID bigint not null,
+        SHIPMENT_ID bigint not null,
+        primary key (SHIPMENT_ID)
+    )
+[main            ] DEBUG  - 21:03:25,301 - org.hibernate.SQL: 
+    create table Shipment (
+        id bigint not null,
+        createdOn timestamp,
+        shipmentState integer,
+        primary key (id)
+    )
+[main            ] DEBUG  - 21:03:25,302 - org.hibernate.SQL: 
+    alter table ITEM_SHIPMENT 
+        add constraint UK_ew9cirvgsiaohxf5nnvfbos2v unique (ITEM_ID)
+[main            ] DEBUG  - 21:03:25,302 - org.hibernate.SQL: 
+    alter table ITEM_SHIPMENT 
+        add constraint FKjskmu51vb8q2s152jr64hlvis 
+        foreign key (ITEM_ID) 
+        references Item
+[main            ] DEBUG  - 21:03:25,302 - org.hibernate.SQL: 
+    alter table ITEM_SHIPMENT 
+        add constraint FK534c2vtma52l0uapjbk6u5njp 
+        foreign key (SHIPMENT_ID) 
+        references Shipment
+[main            ] DEBUG  - 21:03:25,304 - org.hibernate.SQL: 
+    call next value for JPWH_SEQUENCE
+</system-err>
+  </testcase>
+  <testcase classname="org.jpwh.test.associations.OneToOneJoinTable" name="storeNonUniqueRelationship" time="0.006"/>
+  <testcase classname="org.jpwh.test.collections.BagOfStringsOrderBy" name="storeLoadCollection" time="0.007"/>
+  <testcase classname="org.jpwh.test.associations.OneToManyList" name="storeAndLoadItemBids" time="0.011"/>
+  <testcase classname="org.jpwh.test.collections.SetOfStringsOrderBy" name="storeLoadCollection" time="0.005"/>
+  <testcase classname="org.jpwh.test.associations.OneToManyOrphanRemoval" name="storeAndLoadItemBids" time="0.016"/>
+  <testcase classname="org.jpwh.test.collections.SortedMapOfStrings" name="storeLoadCollection" time="0.006"/>
+  <testcase classname="org.jpwh.test.associations.ManyToManyLinkEntity" name="storeLoadCategoryItems" time="0.017"/>
+  <testcase classname="org.jpwh.test.collections.BagOfEmbeddables" name="storeLoadCollection" time="0.007"/>
+  <testcase classname="org.jpwh.test.associations.OneToManyJoinTable" name="storeAndLoadItemUsers" time="0.002">
+    <failure message="org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.associations.onetomany.jointable.Item.buyer" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.associations.onetomany.jointable.Item.buyer
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1692)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1602)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1608)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:1152)
+	at org.jpwh.test.associations.OneToManyJoinTable.storeAndLoadItemUsers(OneToManyJoinTable.java:30)
+Caused by: org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.associations.onetomany.jointable.Item.buyer
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:92)
+	at org.hibernate.action.internal.AbstractEntityInsertAction.nullifyTransientReferencesIfNotAlready(AbstractEntityInsertAction.java:115)
+	at org.hibernate.action.internal.AbstractEntityInsertAction.makeEntityManaged(AbstractEntityInsertAction.java:124)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:185)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:163)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:150)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:325)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:272)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:178)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:121)
+	at org.hibernate.jpa.event.internal.core.JpaPersistEventListener.saveWithGeneratedId(JpaPersistEventListener.java:67)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:189)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:132)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:58)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:774)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:747)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:752)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:1146)
+	... 34 more
+</failure>
+    <system-err>[main            ] DEBUG  - 21:03:26,906 - org.hibernate.SQL: 
+    drop table IMAGE if exists
+[main            ] DEBUG  - 21:03:26,906 - org.hibernate.SQL: 
+    drop table Item if exists
+[main            ] DEBUG  - 21:03:26,906 - org.hibernate.SQL: 
+    drop sequence if exists JPWH_SEQUENCE
+[main            ] DEBUG  - 21:03:26,991 - org.hibernate.SQL: 
+    drop table Item if exists
+[main            ] DEBUG  - 21:03:26,991 - org.hibernate.SQL: 
+    drop table ITEM_BUYER if exists
+[main            ] DEBUG  - 21:03:26,991 - org.hibernate.SQL: 
+    drop table USERS if exists
+[main            ] DEBUG  - 21:03:26,991 - org.hibernate.SQL: 
+    drop sequence if exists JPWH_SEQUENCE
+[main            ] DEBUG  - 21:03:27,49  - org.hibernate.SQL: 
+    create sequence JPWH_SEQUENCE start with 1000 increment by 1
+[main            ] DEBUG  - 21:03:27,49  - org.hibernate.SQL: 
+    create table Item (
+        id bigint not null,
+        name varchar(255),
+        primary key (id)
+    )
+[main            ] DEBUG  - 21:03:27,49  - org.hibernate.SQL: 
+    create table ITEM_BUYER (
+        buyer_id bigint not null,
+        ITEM_ID bigint not null,
+        primary key (ITEM_ID)
+    )
+[main            ] DEBUG  - 21:03:27,50  - org.hibernate.SQL: 
+    create table USERS (
+        id bigint not null,
+        username varchar(255),
+        primary key (id)
+    )
+[main            ] DEBUG  - 21:03:27,50  - org.hibernate.SQL: 
+    alter table ITEM_BUYER 
+        add constraint FKkiwjbexyym0xtm5yvh1i3hfpr 
+        foreign key (buyer_id) 
+        references USERS
+[main            ] DEBUG  - 21:03:27,50  - org.hibernate.SQL: 
+    alter table ITEM_BUYER 
+        add constraint FKq7f4kgui70ruuv946j45nt74r 
+        foreign key (ITEM_ID) 
+        references Item
+[main            ] DEBUG  - 21:03:27,51  - org.hibernate.SQL: 
+    call next value for JPWH_SEQUENCE
+</system-err>
+  </testcase>
+  <testcase classname="org.jpwh.test.collections.EmbeddableSetOfStrings" name="storeLoadCollection" time="0.009"/>
+  <testcase classname="org.jpwh.test.associations.ManyToManyBidirectional" name="storeLoadCategoryItems" time="0.005"/>
+  <testcase classname="org.jpwh.test.collections.BagOfStrings" name="storeLoadCollection" time="0.002"/>
+  <testcase classname="org.jpwh.test.associations.OneToOneSharedPrimaryKey" name="storeAndLoadUserAddress" time="0.003">
+    <failure message="org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.associations.onetoone.sharedprimarykey.User.shippingAddress" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.associations.onetoone.sharedprimarykey.User.shippingAddress
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1692)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1602)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1608)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:1152)
+	at org.jpwh.test.associations.OneToOneSharedPrimaryKey.storeAndLoadUserAddress(OneToOneSharedPrimaryKey.java:39)
+Caused by: org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.associations.onetoone.sharedprimarykey.User.shippingAddress
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:92)
+	at org.hibernate.action.internal.AbstractEntityInsertAction.nullifyTransientReferencesIfNotAlready(AbstractEntityInsertAction.java:115)
+	at org.hibernate.action.internal.AbstractEntityInsertAction.makeEntityManaged(AbstractEntityInsertAction.java:124)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:185)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:163)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:150)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:325)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:272)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:178)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:121)
+	at org.hibernate.jpa.event.internal.core.JpaPersistEventListener.saveWithGeneratedId(JpaPersistEventListener.java:67)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:189)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:132)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:58)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:774)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:747)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:752)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:1146)
+	... 34 more
+</failure>
+    <system-err>[main            ] DEBUG  - 21:03:27,671 - org.hibernate.SQL: 
+    drop table IMAGE if exists
+[main            ] DEBUG  - 21:03:27,671 - org.hibernate.SQL: 
+    drop table Item if exists
+[main            ] DEBUG  - 21:03:27,672 - org.hibernate.SQL: 
+    drop sequence if exists JPWH_SEQUENCE
+[main            ] DEBUG  - 21:03:27,791 - org.hibernate.SQL: 
+    drop table Address if exists
+[main            ] DEBUG  - 21:03:27,791 - org.hibernate.SQL: 
+    drop table USERS if exists
+[main            ] DEBUG  - 21:03:27,792 - org.hibernate.SQL: 
+    drop sequence if exists JPWH_SEQUENCE
+[main            ] DEBUG  - 21:03:27,839 - org.hibernate.SQL: 
+    create sequence JPWH_SEQUENCE start with 1000 increment by 1
+[main            ] DEBUG  - 21:03:27,839 - org.hibernate.SQL: 
+    create table Address (
+        id bigint not null,
+        city varchar(255),
+        street varchar(255),
+        zipcode varchar(255),
+        primary key (id)
+    )
+[main            ] DEBUG  - 21:03:27,839 - org.hibernate.SQL: 
+    create table USERS (
+        id bigint not null,
+        username varchar(255),
+        primary key (id)
+    )
+[main            ] DEBUG  - 21:03:27,840 - org.hibernate.SQL: 
+    alter table USERS 
+        add constraint FKs9aooke5wnqyig2n9r81hh5tn 
+        foreign key (id) 
+        references Address
+[main            ] DEBUG  - 21:03:27,841 - org.hibernate.SQL: 
+    call next value for JPWH_SEQUENCE
+</system-err>
+  </testcase>
+  <testcase classname="org.jpwh.test.collections.SetOfStrings" name="storeLoadCollection" time="0.005"/>
+  <testcase classname="org.jpwh.test.associations.OneToManyCascadeRemove" name="storeAndLoadItemBids" time="0.012"/>
+  <testcase classname="org.jpwh.test.collections.MapOfStringsEmbeddables" name="storeLoadCollection" time="0.019"/>
+  <testcase classname="org.jpwh.test.associations.OneToManyCascadePersist" name="storeAndLoadItemBids" time="0.02"/>
+  <testcase classname="org.jpwh.test.collections.MapOfEmbeddables" name="storeLoadCollection" time="0.011"/>
+  <testcase classname="org.jpwh.test.associations.OneToManyBidirectional" name="storeAndLoadItemBids" time="0.012"/>
+  <testcase classname="org.jpwh.test.collections.MapOfStringsOrderBy" name="storeLoadCollection" time="0.006"/>
+  <testcase classname="org.jpwh.test.associations.OneToManyEmbeddable" name="storeAndLoadUsersShipments" time="0.009"/>
+  <testcase classname="org.jpwh.test.associations.OneToOneForeignGenerator" name="storeAndLoadUserAddress" time="0.006"/>
+  <testcase classname="org.jpwh.test.associations.OneToManyOnDeleteCascade" name="storeAndLoadItemBids" time="0.01"/>
+  <testcase classname="org.jpwh.test.associations.ManyToManyTernary" name="storeLoadCategoryItems" time="0.016"/>
+  <testcase classname="org.jpwh.test.associations.OneToManyBag" name="storeAndLoadItemBids" time="0.01"/>
+  <testcase classname="org.jpwh.test.complexschemas.SecondaryTable" name="storeAndLoadUsers" time="0.002">
+    <failure message="org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.complexschemas.secondarytable.User.billingAddress" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.complexschemas.secondarytable.User.billingAddress
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1692)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1602)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1608)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:1152)
+	at org.jpwh.test.complexschemas.SecondaryTable.storeAndLoadUsers(SecondaryTable.java:32)
+Caused by: org.hibernate.PropertyValueException: not-null property references a null or transient value : org.jpwh.model.complexschemas.secondarytable.User.billingAddress
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:92)
+	at org.hibernate.action.internal.AbstractEntityInsertAction.nullifyTransientReferencesIfNotAlready(AbstractEntityInsertAction.java:115)
+	at org.hibernate.action.internal.AbstractEntityInsertAction.makeEntityManaged(AbstractEntityInsertAction.java:124)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:185)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:163)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:150)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:325)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:272)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:178)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:121)
+	at org.hibernate.jpa.event.internal.core.JpaPersistEventListener.saveWithGeneratedId(JpaPersistEventListener.java:67)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:189)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:132)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:58)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:774)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:747)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:752)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:1146)
+	... 34 more
+</failure>
+    <system-err>[main            ] DEBUG  - 21:03:30,317 - org.hibernate.SQL: 
+    drop table Bid if exists
+[main            ] DEBUG  - 21:03:30,317 - org.hibernate.SQL: 
+    drop table Item if exists
+[main            ] DEBUG  - 21:03:30,317 - org.hibernate.SQL: 
+    drop sequence if exists JPWH_SEQUENCE
+[main            ] DEBUG  - 21:03:30,430 - org.hibernate.SQL: 
+    drop table BILLING_ADDRESS if exists
+[main            ] DEBUG  - 21:03:30,430 - org.hibernate.SQL: 
+    drop table USERS if exists
+[main            ] DEBUG  - 21:03:30,430 - org.hibernate.SQL: 
+    drop sequence if exists JPWH_SEQUENCE
+[main            ] DEBUG  - 21:03:30,483 - org.hibernate.SQL: 
+    create sequence JPWH_SEQUENCE start with 1000 increment by 1
+[main            ] DEBUG  - 21:03:30,483 - org.hibernate.SQL: 
+    create table BILLING_ADDRESS (
+        city varchar(255) not null,
+        street varchar(255) not null,
+        zipcode varchar(5) not null,
+        USER_ID bigint not null,
+        primary key (USER_ID)
+    )
+[main            ] DEBUG  - 21:03:30,483 - org.hibernate.SQL: 
+    create table USERS (
+        id bigint not null,
+        city varchar(255) not null,
+        street varchar(255) not null,
+        zipcode varchar(5) not null,
+        username varchar(255),
+        primary key (id)
+    )
+[main            ] DEBUG  - 21:03:30,483 - org.hibernate.SQL: 
+    alter table BILLING_ADDRESS 
+        add constraint FK35xiit3kslr6ruld3tvstyqb5 
+        foreign key (USER_ID) 
+        references USERS
+[main            ] DEBUG  - 21:03:30,484 - org.hibernate.SQL: 
+    call next value for JPWH_SEQUENCE
+</system-err>
+  </testcase>
+  <testcase classname="org.jpwh.test.complexschemas.CustomSchema" name="configurePersistenceUnit" time="0"/>
+  <testcase classname="org.jpwh.test.complexschemas.CustomSchema" name="storeLoadCheckColumnInvalid" time="0.004"/>
+  <testcase classname="org.jpwh.test.complexschemas.CustomSchema" name="storeLoadCheckSingleRowInvalid" time="0.004"/>
+  <testcase classname="org.jpwh.test.complexschemas.CustomSchema" name="storeLoadCheckSubselectValid" time="0.005"/>
+  <testcase classname="org.jpwh.test.complexschemas.CustomSchema" name="storeLoadDomainInvalid" time="0.003"/>
+  <testcase classname="org.jpwh.test.complexschemas.CustomSchema" name="storeLoadUniqueMultiColumnValid" time="0.003"/>
+  <testcase classname="org.jpwh.test.complexschemas.CustomSchema" name="storeLoadValid" time="0.011"/>
+  <testcase classname="org.jpwh.test.complexschemas.CompositeKeyEmbeddedId" name="storeLoad" time="0.004"/>
+  <testcase classname="org.jpwh.test.complexschemas.NaturalPrimaryKey" name="storeLoad" time="0.004"/>
+  <testcase classname="org.jpwh.test.complexschemas.CompositeKeyReadOnly" name="storeLoad" time="0.005"/>
+  <testcase classname="org.jpwh.test.complexschemas.CompositeKeyMapsId" name="storeLoad" time="0.005"/>
+  <testcase classname="org.jpwh.test.complexschemas.NaturalForeignKey" name="storeLoad" time="0.007"/>
+  <testcase classname="org.jpwh.test.complexschemas.CompositeKeyManyToOne" name="storeLoad" time="0.006"/>
+  <testcase classname="org.jpwh.test.concurrency.NonTransactional" name="autoCommit" time="0.044"/>
+  <testcase classname="org.jpwh.test.concurrency.Versioning" name="firstCommitWins" time="0.022"/>
+  <testcase classname="org.jpwh.test.concurrency.Versioning" name="forceIncrement" time="0.025"/>
+  <testcase classname="org.jpwh.test.concurrency.Versioning" name="manualVersionChecking" time="0.023"/>
+  <testcase classname="org.jpwh.test.concurrency.Locking" name="extendedLock" time="0.011"/>
+  <testcase classname="org.jpwh.test.concurrency.Locking" name="findLock" time="0.009"/>
+  <testcase classname="org.jpwh.test.concurrency.Locking" name="pessimisticReadWrite" time="2.017"/>
+  <testcase classname="org.jpwh.test.concurrency.Locking" name="firstCommitWins" time="0.007"/>
+  <testcase classname="org.jpwh.test.concurrency.Locking" name="forceIncrement" time="0.011"/>
+  <testcase classname="org.jpwh.test.concurrency.Locking" name="manualVersionChecking" time="0.02"/>
+  <testcase classname="org.jpwh.test.concurrency.VersioningTimestamp" name="firstCommitWins" time="0.006"/>
+  <testcase classname="org.jpwh.test.concurrency.VersioningAll" name="firstCommitWins" time="0.011"/>
+  <testcase classname="org.jpwh.test.conversation.ExtendedPC" name="conversationCreateItem" time="0.005"/>
+  <testcase classname="org.jpwh.test.conversation.ExtendedPC" name="conversationEditItem" time="0.009"/>
+  <testcase classname="org.jpwh.test.conversation.Detached" name="businessKeyEquality" time="0.003"/>
+  <testcase classname="org.jpwh.test.fetching.EagerQuery" name="fetchBids" time="0.035"/>
+  <testcase classname="org.jpwh.test.fetching.EagerQuery" name="fetchUsers" time="0.013"/>
+  <testcase classname="org.jpwh.test.fetching.Profile" name="fetchWithProfile" time="0.011"/>
+  <testcase classname="org.jpwh.test.fetching.Subselect" name="fetchCollectionSubselect" time="0.018"/>
+  <testcase classname="org.jpwh.test.fetching.EagerJoin" name="fetchEagerJoin" time="0.03"/>
+  <testcase classname="org.jpwh.test.fetching.EagerSelect" name="fetchEagerSelect" time="0.012"/>
+  <testcase classname="org.jpwh.test.fetching.CartesianProduct" name="fetchCollections" time="0.009"/>
+  <testcase classname="org.jpwh.test.fetching.NPlusOneSelects" name="fetchBids" time="0.011"/>
+  <testcase classname="org.jpwh.test.fetching.NPlusOneSelects" name="fetchUsers" time="0.034"/>
+  <testcase classname="org.jpwh.test.fetching.LazyInterception" name="lazyBasic" time="0.009"/>
+  <testcase classname="org.jpwh.test.fetching.LazyInterception" name="noUserProxy" time="0.006"/>
+  <testcase classname="org.jpwh.test.fetching.FetchLoadGraph" name="loadBidBidderItem" time="0.023"/>
+  <testcase classname="org.jpwh.test.fetching.FetchLoadGraph" name="loadBidBidderItemSellerBids" time="0.014"/>
+  <testcase classname="org.jpwh.test.fetching.FetchLoadGraph" name="loadItem" time="0.016"/>
+  <testcase classname="org.jpwh.test.fetching.FetchLoadGraph" name="loadItemSeller" time="0.019"/>
+  <testcase classname="org.jpwh.test.fetching.ReadOnly" name="immutableEntity" time="0.01"/>
+  <testcase classname="org.jpwh.test.fetching.ReadOnly" name="selectiveReadOnly" time="0.037"/>
+  <testcase classname="org.jpwh.test.fetching.LazyProxyCollections" name="lazyCollections" time="0.015"/>
+  <testcase classname="org.jpwh.test.fetching.LazyProxyCollections" name="lazyEntityProxies" time="0.045"/>
+  <testcase classname="org.jpwh.test.fetching.Batch" name="fetchCollectionBatches" time="0.012"/>
+  <testcase classname="org.jpwh.test.fetching.Batch" name="fetchProxyBatches" time="0.015"/>
+  <testcase classname="org.jpwh.test.filtering.DynamicFilter" name="filterCollection" time="0.013"/>
+  <testcase classname="org.jpwh.test.filtering.DynamicFilter" name="filterItems" time="0.011"/>
+  <testcase classname="org.jpwh.test.filtering.Cascade" name="detachMerge" time="0.01"/>
+  <testcase classname="org.jpwh.test.filtering.Cascade" name="refresh" time="0.013"/>
+  <testcase classname="org.jpwh.test.filtering.Cascade" name="replicate" time="0.011"/>
+  <testcase classname="org.jpwh.test.filtering.AuditLogging" name="writeAuditLog" time="0.02"/>
+  <testcase classname="org.jpwh.test.filtering.Callback" name="notifyPostPersist" time="0.004"/>
+  <testcase classname="org.jpwh.test.filtering.Envers" name="beforeMethod" time="0.101">
+    <failure message="Unable to build entity manager factory" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: Unable to build entity manager factory
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:66)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at org.jpwh.env.JPASetup.&lt;init&gt;(JPASetup.java:62)
+	at org.jpwh.env.JPATest.beforeMethod(JPATest.java:54)
+	at jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(envers)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.envers.boot.internal.AdditionalJaxbMappingProducerImpl$1.addDocument(AdditionalJaxbMappingProducerImpl.java:92)
+	at org.hibernate.envers.configuration.internal.EntitiesConfigurator.configure(EntitiesConfigurator.java:110)
+	at org.hibernate.envers.boot.internal.EnversServiceImpl.doInitialize(EnversServiceImpl.java:152)
+	at org.hibernate.envers.boot.internal.EnversServiceImpl.initialize(EnversServiceImpl.java:117)
+	at org.hibernate.envers.boot.internal.AdditionalJaxbMappingProducerImpl.produceAdditionalMappings(AdditionalJaxbMappingProducerImpl.java:99)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:288)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:770)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:797)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:58)
+	... 37 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 49 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 53 more
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(envers)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.envers.boot.internal.AdditionalJaxbMappingProducerImpl$1.addDocument(AdditionalJaxbMappingProducerImpl.java:92)
+	at org.hibernate.envers.configuration.internal.EntitiesConfigurator.configure(EntitiesConfigurator.java:110)
+	at org.hibernate.envers.boot.internal.EnversServiceImpl.doInitialize(EnversServiceImpl.java:152)
+	at org.hibernate.envers.boot.internal.EnversServiceImpl.initialize(EnversServiceImpl.java:117)
+	at org.hibernate.envers.boot.internal.AdditionalJaxbMappingProducerImpl.produceAdditionalMappings(AdditionalJaxbMappingProducerImpl.java:99)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:288)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:770)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:797)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:58)
+	... 37 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 49 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 53 more
+</failure>
+    <system-err>[main            ] DEBUG  - 21:03:46,54  - org.hibernate.SQL: 
+    drop table Item if exists
+[main            ] DEBUG  - 21:03:46,55  - org.hibernate.SQL: 
+    drop table USERS if exists
+[main            ] DEBUG  - 21:03:46,55  - org.hibernate.SQL: 
+    drop sequence if exists JPWH_SEQUENCE
+</system-err>
+  </testcase>
+  <testcase classname="org.jpwh.test.filtering.Envers" name="auditLogging" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="beforeMethod" time="0.011">
+    <failure message="Unable to build entity manager factory" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: Unable to build entity manager factory
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:66)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at org.jpwh.env.JPASetup.&lt;init&gt;(JPASetup.java:62)
+	at org.jpwh.env.JPATest.beforeMethod(JPATest.java:54)
+	at jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: org.hibernate.boot.InvalidMappingException: Could not parse mapping document: querying/ExternalizedQueries.hbm.xml (RESOURCE)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:46)
+	at org.hibernate.boot.jaxb.internal.UrlXmlSource.doBind(UrlXmlSource.java:36)
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.bind(XmlMappingBinderAccess.java:59)
+	at org.hibernate.boot.MetadataSources.addResource(MetadataSources.java:274)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populate(EntityManagerFactoryBuilderImpl.java:668)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.&lt;init&gt;(EntityManagerFactoryBuilderImpl.java:175)
+	at org.hibernate.jpa.boot.spi.Bootstrap.getEntityManagerFactoryBuilder(Bootstrap.java:34)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilder(HibernatePersistenceProvider.java:165)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:114)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:71)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:52)
+	... 37 more
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(querying/ExternalizedQueries.hbm.xml)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:43)
+	... 47 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 51 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 55 more
+Caused by: org.hibernate.boot.InvalidMappingException: Could not parse mapping document: querying/ExternalizedQueries.hbm.xml (RESOURCE)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:46)
+	at org.hibernate.boot.jaxb.internal.UrlXmlSource.doBind(UrlXmlSource.java:36)
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.bind(XmlMappingBinderAccess.java:59)
+	at org.hibernate.boot.MetadataSources.addResource(MetadataSources.java:274)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populate(EntityManagerFactoryBuilderImpl.java:668)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.&lt;init&gt;(EntityManagerFactoryBuilderImpl.java:175)
+	at org.hibernate.jpa.boot.spi.Bootstrap.getEntityManagerFactoryBuilder(Bootstrap.java:34)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilder(HibernatePersistenceProvider.java:165)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:114)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:71)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:52)
+	... 37 more
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(querying/ExternalizedQueries.hbm.xml)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:43)
+	... 47 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 51 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 55 more
+</failure>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="createHibernateQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="createNamedQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="createQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="createTypedQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="executeQueries" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="namedQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="pagination" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="parameterBinding" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.CreateExecuteQueries" name="queryHints" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.NativeQueries" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.NativeQueries" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.NativeQueries" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.NativeQueries" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.NativeQueries" name="executeRecursiveQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Subselects" name="beforeClass" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Subselects" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Subselects" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Joins" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Joins" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Joins" name="executeQueries" time="0.01">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Grouping" name="beforeClass" time="0.01">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Grouping" name="beforeMethod" time="0.011">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Grouping" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Projection" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Projection" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Projection" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Projection" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Projection" name="executeQueriesWithFunctions" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Restriction" name="beforeClass" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Restriction" name="beforeMethod" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Restriction" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Restriction" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Restriction" name="executeQueriesWithFunctions" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Subselects" name="beforeClass" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Subselects" name="beforeMethod" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Subselects" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Joins" name="beforeClass" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Joins" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Joins" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Typesafe" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Typesafe" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Typesafe" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Restriction" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Restriction" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Restriction" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Restriction" name="beforeMethod" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Restriction" name="executeQueriesWithFunctions" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.advanced.HibernateCriteria" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.advanced.HibernateCriteria" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.advanced.HibernateCriteria" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.advanced.HibernateCriteria" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.advanced.HibernateCriteria" name="foo" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.advanced.TransformResults" name="beforeClass" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.advanced.TransformResults" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.advanced.TransformResults" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.JDBCFallback" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.JDBCFallback" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.JDBCFallback" name="queryItems" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Selection" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Selection" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Selection" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Grouping" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Grouping" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Grouping" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.advanced.FilterCollections" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.advanced.FilterCollections" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.advanced.FilterCollections" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.HibernateSQLQueries" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.HibernateSQLQueries" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.HibernateSQLQueries" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.HibernateSQLQueries" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.sql.HibernateSQLQueries" name="executeRecursiveQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Projection" name="beforeClass" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Projection" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Projection" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Projection" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.jpql.Projection" name="executeQueriesWithFunctions" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Selection" name="beforeClass" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Selection" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.querying.criteria.Selection" name="executeQueries" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.customsql.CustomSQL" name="beforeMethod" time="0.016">
+    <failure message="Unable to build entity manager factory" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: Unable to build entity manager factory
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:66)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at org.jpwh.env.JPASetup.&lt;init&gt;(JPASetup.java:62)
+	at org.jpwh.env.JPATest.beforeMethod(JPATest.java:54)
+	at jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: org.hibernate.boot.InvalidMappingException: Could not parse mapping document: customsql/ItemQueries.hbm.xml (RESOURCE)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:46)
+	at org.hibernate.boot.jaxb.internal.UrlXmlSource.doBind(UrlXmlSource.java:36)
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.bind(XmlMappingBinderAccess.java:59)
+	at org.hibernate.boot.MetadataSources.addResource(MetadataSources.java:274)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populate(EntityManagerFactoryBuilderImpl.java:668)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.&lt;init&gt;(EntityManagerFactoryBuilderImpl.java:175)
+	at org.hibernate.jpa.boot.spi.Bootstrap.getEntityManagerFactoryBuilder(Bootstrap.java:34)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilder(HibernatePersistenceProvider.java:165)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:114)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:71)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:52)
+	... 37 more
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(customsql/ItemQueries.hbm.xml)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:43)
+	... 47 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 51 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 55 more
+Caused by: org.hibernate.boot.InvalidMappingException: Could not parse mapping document: customsql/ItemQueries.hbm.xml (RESOURCE)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:46)
+	at org.hibernate.boot.jaxb.internal.UrlXmlSource.doBind(UrlXmlSource.java:36)
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.bind(XmlMappingBinderAccess.java:59)
+	at org.hibernate.boot.MetadataSources.addResource(MetadataSources.java:274)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populate(EntityManagerFactoryBuilderImpl.java:668)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.&lt;init&gt;(EntityManagerFactoryBuilderImpl.java:175)
+	at org.hibernate.jpa.boot.spi.Bootstrap.getEntityManagerFactoryBuilder(Bootstrap.java:34)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilder(HibernatePersistenceProvider.java:165)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:114)
+	at org.hibernate.jpa.HibernatePersistenceProvider.getEntityManagerFactoryBuilderOrNull(HibernatePersistenceProvider.java:71)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:52)
+	... 37 more
+Caused by: org.hibernate.boot.MappingException: Unable to perform unmarshalling at line number 0 and column 0. Message: null : origin(customsql/ItemQueries.hbm.xml)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:178)
+	at org.hibernate.boot.jaxb.internal.MappingBinder.doBind(MappingBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.doBind(AbstractBinder.java:102)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.bind(AbstractBinder.java:57)
+	at org.hibernate.boot.jaxb.internal.InputStreamXmlSource.doBind(InputStreamXmlSource.java:43)
+	... 47 more
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.hibernate.boot.jaxb.internal.AbstractBinder.jaxb(AbstractBinder.java:162)
+	... 51 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 55 more
+</failure>
+  </testcase>
+  <testcase classname="org.jpwh.test.customsql.CustomSQL" name="delete" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.customsql.CustomSQL" name="beforeMethod" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.customsql.CustomSQL" name="read" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.customsql.CustomSQL" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.customsql.CustomSQL" name="readRestrictedCollection" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.customsql.CustomSQL" name="beforeMethod" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.customsql.CustomSQL" name="update" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="org.jpwh.test.cache.SecondLevel" name="cacheBehavior" time="0.04"/>
+  <testcase classname="org.jpwh.test.cache.SecondLevel" name="cacheControl" time="0.013"/>
+  <testcase classname="org.jpwh.test.cache.SecondLevel" name="cacheModes" time="0.022"/>
+  <testcase classname="org.jpwh.test.cache.SecondLevel" name="cacheNaturalId" time="0.02"/>
+  <testcase classname="org.jpwh.test.cache.SecondLevel" name="cacheQueryResults" time="0.021"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BulkStatementsCriteria" name="bulkDelete" time="0.033"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BulkStatementsCriteria" name="bulkUpdate" time="0.017"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BulkStatementsCriteria" name="bulkUpdateVersioned" time="0.019"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BulkStatementsJPQL" name="bulkDelete" time="0.01"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BulkStatementsJPQL" name="bulkInsert" time="0.018"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BulkStatementsJPQL" name="bulkUpdate" time="0.014"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BulkStatementsJPQL" name="bulkUpdateInheritance" time="0.012"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BulkStatementsJPQL" name="bulkUpdateVersioned" time="0.012"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BulkStatementsSQL" name="bulkUpdate" time="0.02"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BulkStatementsSQL" name="bulkUpdateHibernate" time="0.029"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BatchInsertUpdate" name="batchInsertUpdate" time="3.882"/>
+  <testcase classname="org.jpwh.test.bulkbatch.BatchInsertUpdate" name="batchInsertUpdateWithStatelessSession" time="3.081"/>
+</testsuite>
